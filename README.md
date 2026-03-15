@@ -13,12 +13,15 @@ This is a clean, "blank slate" template for developing private ATAK plugins. It 
 - **GitHub:** Click the **"Use this template"** button to create a new repository based on this code.
 - **Manual:** Copy this directory to your `plugins/` folder in the ATAK SDK.
 
-### 3. Rename Your Plugin
-To transition from the template to your own plugin:
-1. Update `namespace` and `applicationId` in `app/build.gradle`.
-2. Rename the package directory `com.atakmap.android.helloworld` to your desired package name.
-3. Update `AndroidManifest.xml` and `app/src/main/assets/plugin.xml` to reflect your new package and class names.
-4. Change `app_name` in `strings.xml`.
+### 3. New Plugin Initialization Checklist
+Follow these steps immediately after creating your new repository to personalize it:
+
+- [ ] **Rename Package:** Right-click `com.atakmap.android.helloworld` in Android Studio -> **Refactor** -> **Rename** to your new package name (e.g., `com.atakmap.android.mytool`).
+- [ ] **Update build.gradle:** In `app/build.gradle`, update the `namespace` to match your new package name.
+- [ ] **Update Manifest:** In `app/src/main/AndroidManifest.xml`, update all activity and service paths.
+- [ ] **Update plugin.xml:** In `app/src/main/assets/plugin.xml`, update the `impl` attribute to point to your new `Lifecycle` class.
+- [ ] **Change App Name:** Update `app_name` and `hello_world` strings in `app/src/main/res/values/strings.xml`.
+- [ ] **Update README:** Replace this template's README with your plugin's specific documentation.
 
 ## Key Concepts
 
